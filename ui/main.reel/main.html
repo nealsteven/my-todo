@@ -34,10 +34,24 @@
                     "type": "action",
                     "useCapture": true,
                     "listener": {"@": "actionEventListener"}
+                },
+                {
+                    "type": "action",
+                    "listener": {"@": "actionEventListener2"}
                 }
             ]
         },
         "actionEventListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "addContent",
+                "handler": {"@": "rangeController"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
+        "actionEventListener2": {
             "prototype": "montage/core/event/action-event-listener",
             "properties": {
                 "action": "addContent",
